@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: '標楷體';
+    overflow: hidden;
+}
+
+/* body .main */
+.main {
+    /* background-color: cornflowerblue; */
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    margin: 10px auto;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 
+    body 內 除了aside section 都要上border
+    aside 內 上border (menu update)
+    section 內 上border (marquee content)
+*/
+body>*:not(aside, section), aside>*, section>* {
+/* body>*, aside>*, section>* { */
+    border: 1px solid lightgray;
+}
+
+/* .top */
+.top {
+    flex-basis: 1000px;
+    height: 65px;
+}
+
+
+
+/* aside  */
+
+.aside {
+    flex-basis: 215px;
+    height: calc(768px - 65px - 20px);
+    display: flex;
+    flex-direction: column;
+}
+
+/* aside .menu  */
+.menu {
+    flex-basis:calc(100% - 25px);
+    height: 65px;
+}
+
+
+/* aside .menu  */
+.update {
+   flex-basis: 25px;
+}
+
+
+/* section */
+.section{
+    flex-basis: calc(1000px - 215px);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.marquee {
+    flex-basis: 29px ;
+    padding: 0 calc((100% - 770px -2px) /2);
+}
+
+.content {
+    flex-basis: calc(100% - 29px);
+    padding:calc((100% - 770px - 2px) /2);
+}
+
+.footer {
+   flex-basis: 1000px;
+   height:20px;
+   color: black; 
+}

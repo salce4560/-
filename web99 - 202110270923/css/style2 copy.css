@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    font-family: "標楷體";
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+body > * :not(aside,section) , aside > * , section > * {
+    border: 1px solid lightgrey;
+}
+/* top */
+.top{
+    width:500px;
+    height:100px;
+    background-color: lightpink;
+}
+/* aside */
+.aside{
+    width:500px;
+    height:100px;
+    background-color: lightgreen;
+}
+/* aside .menu */
+.menu{
+    
+}
+/* aside  .update*/
+.update{
+    
+}
+
+/* section */
+.section{
+    width:500px;
+    height:100px;
+    background-color: lightskyblue;
+}
+/* section .marquee*/
+.marquee{
+    
+}
+/* section .content*/
+.content{
+    
+}
+
+/* footer */
+.footer{
+    width:500px;
+    height:100px;
+    background-color: lightyellow;
+}

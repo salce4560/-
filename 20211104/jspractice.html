@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+           font-size: medium;
+            
+        }
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 70%;
+            text-align: center;
+            border: 1px solid lightblue;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+
+        tr,td {
+            border: 1px solid lightblue;            
+        }
+        
+        th{
+            border: 1px solid lightpink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" id="myForm">
+            <table>
+                <tr>
+                    <td colspan="4">
+                        <h2>starbucks</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th>總價</th>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="itemName1" id="itemName1" value="拿鐵"></td>
+                    <td><input type="number" name="itemPrice1" id="itemPrice1" value="150"></td>
+                    <td><input type="number" name="itemCount1" id="itemCount1" value="0"></td>
+                    <td><input type="number" name="itemTotal1" id="itemTotal1" value="0"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="itemName2" id="itemName2" value="星冰樂"></td>
+                    <td><input type="number" name="itemPrice2" id="itemPrice2" value="200"></td>
+                    <td><input type="number" name="itemCount2" id="itemCount2" value="0"></td>
+                    <td><input type="number" name="itemTotal2" id="itemTotal2" value="0"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="itemName3" id="itemName3" value="每日咖啡"></td>
+                    <td><input type="number" name="itemPrice3" id="itemPrice3" value="100"></td>
+                    <td><input type="number" name="itemCount3" id="itemCount3" value="0"></td>
+                    <td><input type="number" name="itemTotal3" id="itemTotal3" value="0"></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="訂購成功" id="resultBtn">
+                    </td>
+                </tr>   
+                <tr>
+                    <td colspan="4">
+                        <p id="pResult">result :</p>
+                    </td>
+                </tr>               
+            </table>
+            
+            <br>     
+        </form>
+    </div>
+    <script src="./happy.js"></script>
+</body>
+
+</html>

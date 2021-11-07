@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    font-family: "標楷體";
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    width: 1024px;
+    padding: 0 12px;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main>*:not(aside,section) , aside>* , section>* {
+    border: 1px solid lightgrey;
+}
+/* top */
+.top{
+   flex-basis: 1000px;
+   height: 65px;
+   background-color: lightblue;
+}
+/* aside */
+.aside{    
+    /* 1.flex item ? 
+       2.我的container是誰 body
+       3.flex-direction row / column
+       
+       container:
+       body
+        flex-direction: row
+
+       item
+        flex-basis : row方向 width 橫的
+
+
+
+
+
+
+    */
+    flex-basis: 215px;
+
+    height: calc(768px - 65px - 20px);
+    display: flex;
+    flex-direction: column;
+}
+  
+/* aside .menu */
+.menu{
+    /* 
+       container:
+       aside
+        flex-direction: column
+
+       item
+        flex-basis : column height 直的
+    */
+    flex-basis: calc((100% - 25px));
+
+
+}
+/* aside  .update*/
+.update{
+    flex-basis: 25px;
+}
+
+/* section */
+.section{
+   flex-basis: calc((100% - 215px));
+   display: flex;
+   flex-direction: column;
+}
+/* section .marquee*/
+.marquee{
+    flex-basis: 29px;
+}
+/* section .content*/
+.content{
+    flex-basis: calc((100% - 29px));    
+}
+
+/* footer */
+.footer{
+    flex-basis:1000px ;
+}
