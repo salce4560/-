@@ -3,10 +3,9 @@
     font-family: '標楷體';
     overflow: hidden;
 }
-body>*:not(aside,section),section>*,aside>*{
-    border: solid 1px black;
+body>*:not(aside,section),aside>*,section>*{
+    border: 1px solid black;
 }
-
 
 .main{
     display: flex;
@@ -33,11 +32,13 @@ height: 65px;
 
 }
 .aside>nav>a{
-display: inline-block;
 background: url(./menu1.png);
+display: inline-block;
 width: 200px;
-height: 20px;
-
+height: 35px;
+font-size: 16px;
+text-decoration: none;
+color: black;
 }
 .aside>nav>a:hover{
     background: url(./menu2.png);
