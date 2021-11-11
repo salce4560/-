@@ -1,0 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* 習慣動作，把瀏覽器設定歸零 */
+}
+

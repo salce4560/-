@@ -30,9 +30,14 @@
                 <td >總和</td>
             </tr>
             <tr>
-                <td id="number1"></td>
-                <td id="price1"></td>
-                <td id="count1"></td>
+                <td ><input type="text" name="number" id="number"></td>
+                <td ><input type="text" name="price1" id="price1" value="100"></td>
+                <td ><input type="text" name="count1" id="count1"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="result">
+                </td>
             </tr>
             
         </table>
@@ -40,12 +45,20 @@
 </body>
 <script>
 const form=document.getElementById("myForm");
-const number=document.getElementById("number1");
-const price=document.getElementById("price1");
-const price=document.getElementById("count1");
+const number1=document.getElementById("number1");
+const price1=document.getElementById("price1");
+const count1=document.getElementById("count1");
 
 
+form.addEventListener("submit",function(e){
+    e.preventDefault();
 
+    calResult=parseInt(number1.value) * parseInt(price1.value);
+    count1.value=calResult;
+
+    
+    
+})
 
 
 </script>

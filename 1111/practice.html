@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    header {
+        padding: 50px 0;
+        width: 100%;
+        background-image: url('https://picsum.photos/id/1074/200/300');
+        background-size: cover;
+        height: 20%;
+    }
+
+    .hello {
+        
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
+        justify-content: space-around;
+    }
+
+    nav {
+        width: calc(90% / 3);
+        border: 1px black solid;
+        flex-basis: 50px;
+        
+    }
+
+   
+
+    @media (max-width:100px) {
+        .hello {
+            background-color: yellow;
+            text-align: center;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav>p {
+            text-align: center;
+            font-size: 24px;
+            color: chocolate;
+        }
+    }
+
+    @media (max-width:699px) and (min-width:400px) {
+        nav {
+            width: 50%;
+        }
+
+        nav>p {
+            text-align: center;
+            font-size: 20px;
+            color: red;
+        }}
+</style>
+
+<body>
+    <nav class="hello">
+        <header>
+            歡迎歡迎
+        </header>
+
+        <nav class="pink">
+            <h1>hello</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                . Autem exercitationem consequatur officia rerum sapiente. Omnis ducimus ad quia deserunt, minus tempora
+                quaerat sunt, eos aliquam accusamus, tenetur odio porro repellat?</p>
+        </nav>
+        <nav class="yellow">
+            <h1>45645</h1>
+            <p>45645465464564564</p>
+        </nav>
+        <nav class="blue">
+            <h1>454656464</h1>
+            <p>454564564654564</p>
+        </nav>
+
+
+    </nav>
+</body>
+
+</html>
