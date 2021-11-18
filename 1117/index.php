@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <script>
   $(document).ready(function(){
@@ -57,12 +59,15 @@
     display:flex;
     justify-content:center;
 }
-
+.slider{
+    width:500px;
+    height:333px;
+}
 </style>
 <div class="slider">
-<div><img src="./img/01.jpg" alt=""></div>
-<div><img src="./img/02.jpg" alt=""></div>
-<div><img src="./img/03.jpg" alt=""></div>
+<div><img src="./img/01.jpg"   alt=""></div>
+<div><img src="./img/02.jpg"  alt=""></div>
+<div><img src="./img/03.jpg"  alt=""></div>
 <div><img src="./img/04.jpeg" alt=""></div>
 </div>
 <?php
@@ -135,8 +140,8 @@
 
 <h3><?=$year;?>年<?=$month;?>月</h3>
  <div class="jump">
-     <a href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>">上一個月</a>
-     <a href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>">下一個月</a>
+     <a href="index.php?year=<?=$lastyear;?>&month=<?=$lastmonth;?>"><i class="fas fa-angle-double-left"></i></a>
+     <a href="index.php?year=<?=$nextyear;?>&month=<?=$nextmonth;?>"><i class="fas fa-angle-double-right"></i></a>
 </div>   
 <div class="calendar">
     
