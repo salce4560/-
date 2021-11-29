@@ -13,12 +13,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
 crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<!-- <script>
+ <script>
   $(document).ready(function(){
     $('.slider').bxSlider({auto: true});
   });
-</script> -->
+</script> 
     <style>
+        #mg{
+            width:"100px" ;
+            height:"100px";
+
+        }
         .dayoff{
             background-color:lightgray;
         }
@@ -54,6 +59,12 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     width:500px;
     height:333px;
 }
+.mon{
+    width:100%;
+    height:100%;
+    margin-left:450px;
+
+}
     </style>
     
 </head>
@@ -63,19 +74,17 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
 
-<!-- <div class="slider">
-<div><img src="./img/01.jpg"   alt=""></div>
-<div><img src="./img/02.jpg"  alt=""></div>
-<div><img src="./img/03.jpg"  alt=""></div>
-<div><img src="./img/04.jpeg" alt=""></div>
-</div> -->
+ <div class="slider">
+<div class="mon"><img src="./img/01.jpg"   alt=""></div>
+<div class="mon"><img src="./img/02.jpg"  alt=""></div>
+<div class="mon"><img src="./img/04.jpeg" alt=""></div>
+</div> 
 <?php
     $specialDate=['2021-11-15'=>'發薪水','2021-12-25'=>'聖誕節'];
    //echo $specialDate['2011-11-11'];
 /*     $firstDay=date("Y-m-01");
     $month=date("m"); */
-$day=date("m");
-print_r($day);
+
     //直接訪問本頁不帶值
     //訪問本頁帶月份值
     /* empty(1)=>false
@@ -124,11 +133,40 @@ print_r($day);
     //陣列中加入首列資料
     $headers=['周日','周一','周二','周三','周四','周五','周六'];
 
-echo '<img src="https://picsum.photos/id/'.$month.'/1200/300">';
+// echo '<img class="mg" src="https://picsum.photos/id/'.$month.'/1200/300">';
 
-if($month==1){
-    echo "<style>body{background-color:block}</style>";
+switch ($month) {
+    case '1':
+       echo "<style>body{background-color:white}</style>";
+        break;
+    case '2':
+            echo "<style>body{background-color:gray}</style>";
+        break;
+    case '3':
+            echo "<style>body{background-color:white}</style>";
+             break;
+    case '4':
+                 echo "<style>body{background-color:gray}</style>";
+            break;
+    case '6':
+                echo "<style>body{background-color:white}</style>";
+                 break;
+    case '7':
+            echo "<style>body{background-color:gray}</style>";
+                break;
+    default:
+    echo "<style>body{background-color:white}</style>";
+        break;
 }
+
+
+
+//  if($month==1 ){
+//      echo "<style>body{background-color:white}</style>";
+//  }else {
+//      echo"<style>body{background-color:lightgray}</style>";
+//  }
+ 
 
     //陣列中加入月前空白;
     for($i=0;$i<$firstWeekWhiteDays;$i++){
@@ -151,8 +189,6 @@ if($month==1){
 <div class="calendar">
     
 <?php
-
-
 //月曆頭的地方
 foreach($headers as $header){
     echo "<div class='cell'>";
