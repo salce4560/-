@@ -1,11 +1,13 @@
 <?php
 $dsn="mysql:host=localhost;charset=utf8;dbname=homework";
 $pdo=new PDO($dsn,'root','');
-$range=(isset($_GET['id']))?$_GET['id']:3;
+$range=(isset($_GET['id']))?$_GET['id']:6;
 
 $sql="select * from `home` where `id`< $range";
 $rows=$pdo->query($sql)->fetchAll();
-
+echo"<pre>";
+print_r($rows);
+echo"</pre>";
 
 ?>
 <?php
@@ -20,8 +22,8 @@ $rows=$pdo->query($sql)->fetchAll();
  if(!empty($_GET['ns'])){
     $ns=$_GET['ns']+1;
 }else{
-    echo"123";
-    $ns=1;
+    
+  $ns=1;
 }
 
 
@@ -55,8 +57,9 @@ $rows=$pdo->query($sql)->fetchAll();
 <body>
     <div class="cotainer mt-3">
         <div class="row">
-            <div class="col text-center">            
-                <img class="img-fluid" src="https://picsum.photos/id/<?= $data[0]['src'];?>/800/600" width="50%" alt="page1">
+            <div class="col text-center">   
+                <img class="img-fluid" src="./images/image<?=$ns;?>.jpg" width="50%"  ;  >      
+                <!-- <img class="img-fluid" src="https://picsum.photos/id/<?= $data[0]['src'];?>/800/600" width="50%" alt="page1"> -->
                 <!-- <img class="img-fluid" src="https://fakeimg.pl/800x600/ff0000/000" width="50%" alt="page1"> -->
             </div>
         </div>
@@ -70,10 +73,38 @@ $rows=$pdo->query($sql)->fetchAll();
             <div class="col-sm-8 text-center">
                 <div class="box">
                     <p>
-                        <?php                     
-                       print_r($rows[0]['chinese']);
-                       echo"<br>";
-                       print_r($rows[0]['english']);
+                        <?php
+                        switch ($ns) {
+                            case '1':
+                                print_r($rows[0]['chinese']);
+                                echo"<br>";
+                                print_r($rows[0]['english']);
+                                break;
+                            case '2':
+                                    print_r($rows[1]['chinese']);
+                                    echo"<br>";
+                                    print_r($rows[1]['english']);
+                                    break;
+                            case '3':
+                                    print_r($rows[2]['chinese']);
+                                    echo"<br>";
+                                    print_r($rows[2]['english']);
+                                    break;
+                            case '4':
+                                    print_r($rows[3]['chinese']);
+                                    echo"<br>";
+                                    print_r($rows[3]['english']);
+                                    break;
+                            case '5':
+                                    print_r($rows[4]['chinese']);
+                                    echo"<br>";
+                                    print_r($rows[4]['english']);
+                                    break;        
+                            default:
+                                # code...
+                                break;
+                        }                     
+                     
                         ?>
                     </p>
                 </div>
