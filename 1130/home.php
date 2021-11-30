@@ -21,8 +21,9 @@ $rows=$pdo->query($sql)->fetchAll();
     $ns=$_GET['ns']+1;
 }else{
     echo"123";
+    $ns=1;
 }
-$ns=$_GET['ns']+1;
+
 
 ?>
 
