@@ -20,11 +20,14 @@ echo"</pre>";
 ?>
 <?php
  if(!empty($_GET['ns'])){
-    $ns=$_GET['ns']+1;
+    $ns=$_GET['ns'];
 }else{
     
   $ns=1;
 }
+
+$next=$ns+1;
+$last=$ns-1;
 
 
 ?>
@@ -68,7 +71,7 @@ echo"</pre>";
             <div class="col-sm-2 text-center">
                 <!-- <button type="button" class="btn btn-primary btn-lg">Primary</button> -->
                 
-                <a href="#test123"><i class="fas fa-arrow-left display-1"></i></a>
+                <a href="home.php?ns=<?=$last;?>"><i class="fas fa-arrow-left display-1"></i></a>
             </div>
             <div class="col-sm-8 text-center">
                 <div class="box">
@@ -111,7 +114,7 @@ echo"</pre>";
             </div>
             <div class="col-sm-2 text-center align-self-sm-center">
                 <!-- <button type="button" class="btn btn-primary">Primary</button> -->
-                <a href="home.php?ns=<?=$ns;?>"><i class="fas fa-arrow-right display-1"></i></a>
+                <a href="home.php?ns=<?=$next;?>"><i class="fas fa-arrow-right display-1"></i></a>
             </div>
         </div>
     </div>
