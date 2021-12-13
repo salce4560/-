@@ -1,5 +1,5 @@
 <?php
-    $dsn="mysql:host=localhost;charset=utf8;dbname=students";
+    $dsn="mysql:host=localhost;charset=utf8;dbname=mypoling";
     $pdo=new PDO($dsn,'root','');
 
   
@@ -44,12 +44,9 @@ function all($table,...$arg){
  * 3.指定更新的條件   ????
  * 
  */
-$column=['date'=>'2021-11-22',
-         'place'=>'職訓中心'];
-$where=['payment_method'=>'信用卡',
-        'classification'=>'交通'];
+
         
-update('expenditure',$column,$where);
+
 /*  $sql="";
 foreach ($array as $key => $value) {
     echo '迴圈執行前=> '.$sql.'<br>';
@@ -83,11 +80,11 @@ echo "迴圈完成後=>".mb_substr($sql,0,mb_strlen($sql)-5); */
  }
 function insert($table,$array){
 global $pdo;
-$sql="INSERT into $table(`".implode('`,`',array_key($array))."`)
+$sql="INSERT into $table(`".implode('`,`',array_keys($array))."`)
                 value('".implode("','",$array)."')";
 
                 echo $sql;
-                return $pdo->exec($sql);
+                 return $pdo->exec($sql);
 }
 
 ?>

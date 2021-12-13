@@ -24,13 +24,15 @@ function all($table,...$arg){
         }else{
             $sql=$sql.$arg[0];
         }
+        
     }
-
-    if(isset($arg[1])){
-        $sql=$sql.$arg[1];
-    }
-    
     echo $sql;
+
+    // if(isset($arg[1])){
+    //     $sql=$sql.$arg[1];
+    // }
+    
+    // echo $sql;
     
     $rows=$pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     return $rows;
@@ -44,40 +46,40 @@ function all($table,...$arg){
  * 3.指定更新的條件   ????
  * 
  */
-$column=['date'=>'2021-11-22',
-         'place'=>'職訓中心'];
-$where=['payment_method'=>'信用卡',
-        'classification'=>'交通'];
+// $column=['date'=>'2021-11-22',
+//          'place'=>'職訓中心'];
+// $where=['payment_method'=>'信用卡',
+//         'classification'=>'交通'];
         
-update('expenditure',$column,$where);
-/*  $sql="";
-foreach ($array as $key => $value) {
-    echo '迴圈執行前=> '.$sql.'<br>';
-    $sql=$sql . "`$key`='$value' AND ";
-    echo '迴圈執行後=> '.$sql.'<br>';
-}
-echo "迴圈完成後=>".mb_substr($sql,0,mb_strlen($sql)-5); */
- function update($table,$column,$where){
-    global $pdo;
+// update('expenditure',$column,$where);
+// /*  $sql="";
+// foreach ($array as $key => $value) {
+//     echo '迴圈執行前=> '.$sql.'<br>';
+//     $sql=$sql . "`$key`='$value' AND ";
+//     echo '迴圈執行後=> '.$sql.'<br>';
+// }
+// echo "迴圈完成後=>".mb_substr($sql,0,mb_strlen($sql)-5); */
+//  function update($table,$column,$where){
+//     global $pdo;
 
-    $sql_set='';
-    foreach ($column as $key => $value) {
-        $sql_set=$sql_set . "`$key`='$value',";
-    }
-    $sql_set=trim($sql_set,',');
+//     $sql_set='';
+//     foreach ($column as $key => $value) {
+//         $sql_set=$sql_set . "`$key`='$value',";
+//     }
+//     $sql_set=trim($sql_set,',');
 
-    $sql_where='';
-    foreach ($where as $key => $value) {
-        $sql_where=$sql_where . "`$key`='$value' AND ";
-    }
-    $sql_where=mb_substr($sql_where,0,mb_strlen($sql_where)-5);;
+//     $sql_where='';
+//     foreach ($where as $key => $value) {
+//         $sql_where=$sql_where . "`$key`='$value' AND ";
+//     }
+//     $sql_where=mb_substr($sql_where,0,mb_strlen($sql_where)-5);;
 
-    mb_substr($sql_where,0,mb_strlen($sql_where)-5);
-    $sql="UPDATE `$table` SET $sql_set WHERE $sql_where ";
-    "UPDATE `expenditure` 
-        SET `date`='2021-11-22',`place`='泰山訓練場' 
-         WHERE `payment_method`='信用卡' AND `classification`='教育'";
-    //echo $sql;
-    $pdo->exec($sql);
+//     mb_substr($sql_where,0,mb_strlen($sql_where)-5);
+//     $sql="UPDATE `$table` SET $sql_set WHERE $sql_where ";
+//     "UPDATE `expenditure` 
+//         SET `date`='2021-11-22',`place`='泰山訓練場' 
+//          WHERE `payment_method`='信用卡' AND `classification`='教育'";
+//     //echo $sql;
+//     $pdo->exec($sql);
 
- }
+//  }
